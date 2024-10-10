@@ -1,2 +1,162 @@
 @import './base.css';
 
+@font-face {
+  font-family: 'Januar';
+  src: url('./fonts/ABCFavoritEdu-Light.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'JanuarBold';
+  src: url('./fonts/ABCFavoritEdu-Book.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Monospace';
+  src: url('./fonts/ABCFavoritMonoEdu-Light.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Symbols';
+  src: url('./fonts/ABCFavoritEdu-Light.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+}
+
+
+
+/* @font-face {
+  font-family: 'Special';
+  src: url('./fonts/ABCFAVORITMONOEDU-LIGHT.OTF') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+} */
+
+@font-face {
+  font-family: 'Special';
+  src: url('./fonts/Sneaky-Times.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+/* @font-face {
+  font-family: 'Special';
+  src: url('./fonts/Plastic-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+} */
+
+
+*{
+  font-family: 'Januar';
+  font-feature-settings:  "liga" 0, "clig" 0, "dlig" 0, "ss04" 1, "ss03" ;
+  text-wrap: balance;
+  transition: background-color 0.9s ease, background-color 0.2s ease;
+  ;
+
+}
+
+.arrow{
+  font-family: 'Symbols';
+  font-size: 0.9em;
+  position: absolute;
+  transform: translate(-0.9em, 0.1em);
+
+}
+
+a{
+  color: unset;
+  text-decoration: none;
+}
+
+h1{
+  font-family: "Januar";
+  /* text-transform: lowercase; */
+  font-size: 4rem;
+  /* -webkit-text-stroke: 2px white; */
+  /* letter-spacing: 0.1em; */
+  /* padding-left: 0.5rem; */
+
+  font-variant-alternates: "ss04";
+  line-height: 0.9;
+  /* letter-spacing: -0.03em; */
+    /* text-transform: uppercase; */
+}
+
+
+h2{
+  font-family: "Januar";
+  font-size: 2rem;
+  line-height: 1.0;
+  margin-bottom: 0.5rem;
+  /* text-transform: lowercase; */
+  /* letter-spacing: -0.03em; */
+    /* text-transform: uppercase; */
+}
+
+
+body, html{
+  display: block !important;
+  min-height: 100svh;
+}
+
+main{
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+img { 
+  image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+  image-rendering: -moz-crisp-edges;          /* Firefox                        */
+  image-rendering: -o-crisp-edges;            /* Opera                          */
+  image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+  image-rendering: pixelated;                 /* Universal support since 2021   */
+  image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+  -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
+
+}
+
+
+.filter-boxes {
+  margin: 1rem;
+  cursor: pointer;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.filter-box {
+  padding: 0rem 0.4rem;
+  padding-top: 0.05rem;
+  background-color: #222;
+  border-radius: 0.5rem;
+}
+
+.dark-mode .filter-box{
+  background-color: #EEE;
+}
+
+.filter-box:hover {
+  background-color: #444;
+}
+
+.dark-mode .filter-box:hover{
+  background-color: #CCC;
+}
+
+.filter-box.selected {
+  background-color: #444;
+  color: white;
+}
+
+.dark-mode .filter-box.selected{
+  background-color: #CCC;
+  color: black
+}
